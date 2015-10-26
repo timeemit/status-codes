@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Status Codes</title>
+  <link rel='stylesheet' href='vendor/stylesheets/normalize.min.css'>
+  <link rel='stylesheet' href='vendor/stylesheets/pure.min.css'>
+  <link rel='stylesheet' href='vendor/stylesheets/opentip.css'>
+  <link rel='stylesheet' href='stylesheets/styles.css' type='text/css' >
+</head>
+
+<body class='centered'>
+  <h1 class='header-1 centered-text'>Status Codes</h1>
+  <div id='app_box'></div>
+  
+ 
+  <script src='vendor/javascripts/lunr.js'></script>
+  <script src='vendor/javascripts/react.js'></script>
+  <script src='vendor/javascripts/jquery.min.js'></script>
+  <script src='vendor/javascripts/opentip.min.js'></script>
+  <script>
+    window.idx = lunr(function() { 
+      this.field('code');
+      this.field('phrase');
+      this.field('description');
+      this.ref('code');
+    });
+  </script>
+  <script src='build/app_box.js'> </script>
+  <script src='build/search_form.js'> </script>
+  <script src='build/search_filters.js'> </script>
+  <script src='build/disc_button.js'> </script>
+  <script src='build/search_list.js'> </script>
+  <script src='build/search_result.js'> </script>
+  <script src='build/selected_doc.js'> </script>
+  <script src='build/kickoff.js'></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+.DS_Store
+*.swp
+utilities/status_codes/build/.module-cache*

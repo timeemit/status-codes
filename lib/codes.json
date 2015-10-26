@@ -1,0 +1,2503 @@
+[
+  {
+		"code": "100",
+    "phrase": "Continue",
+    "description": "The 100 (Continue) status code indicates that the initial part of a request has been received and has not yet been rejected by the server.  The server intends to send a final response after the request has been fully received and acted upon.  When the request contains an Expect header field that includes a 100-continue expectation, the 100 response indicates that the server wishes to receive the request payload body, as described in Section 5.1.1.  The client ought to continue sending the request and discard the 100 response.  If the request did not contain an Expect header field containing the 100-continue expectation, the client can simply discard this interim response."
+  },
+  {
+		"code": "101",
+    "phrase": "Switching Protocols",
+    "description": "The 101 (Switching Protocols) status code indicates that the server understands and is willing to comply with the client's request, via the Upgrade header field (Section 6.7 of [RFC7230]), for a change in the application protocol being used on this connection.  The server MUST generate an Upgrade header field in the response that indicates which protocol(s) will be switched to immediately after the empty line that terminates the 101 response.  It is assumed that the server will only agree to switch protocols when it is advantageous to do so.  For example, switching to a newer version of HTTP might be advantageous over older versions, and switching to a real-time, synchronous protocol might be advantageous when delivering resources that use such features."
+  },
+  {
+		"code": "102",
+    "phrase": "Processing ( WebDAV, RFC 2518 )",
+    "description": "The 102 (Processing) status code is an interim response used to inform the client that the server has accepted the complete request, but has not yet completed it.  This status code SHOULD only be sent when the server has a reasonable expectation that the request will take significant time to complete. As guidance, if a method is taking longer than 20 seconds (a reasonable, but arbitrary value) to process the server SHOULD return a 102 (Processing) response. The server MUST send a final response after the request has been completed.  Methods can potentially take a long period of time to process, especially methods that support the Depth header.  In such cases the client may time-out the connection while waiting for a response.  To prevent this the server may return a 102 (Processing) status code to indicate to the client that the server is still processing the method."
+  },
+  {
+		"code": "103",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "104",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "105",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "106",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "107",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "108",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "109",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "110",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "111",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "112",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "113",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "114",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "115",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "116",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "117",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "118",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "119",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "120",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "121",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "122",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "123",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "124",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "125",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "126",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "127",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "128",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "129",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "130",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "131",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "132",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "133",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "134",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "135",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "136",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "137",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "138",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "139",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "140",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "141",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "142",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "143",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "144",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "145",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "146",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "147",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "148",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "149",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "150",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "151",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "152",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "153",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "154",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "155",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "156",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "157",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "158",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "159",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "160",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "161",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "162",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "163",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "164",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "165",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "166",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "167",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "168",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "169",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "170",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "171",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "172",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "173",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "174",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "175",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "176",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "177",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "178",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "179",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "180",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "181",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "182",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "183",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "184",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "185",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "186",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "187",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "188",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "189",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "190",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "191",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "192",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "193",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "194",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "195",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "196",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "197",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "198",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+    "code": "199",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "200",
+    "phrase": "OK",
+    "description": "The 200 (OK) status code indicates that the request has succeeded.  The payload sent in a 200 response depends on the request method.  For the methods defined by this specification, the intended meaning of the payload can be summarized as: GET  a representation of the target resource; HEAD  the same representation as GET, but without the representation data; POST  a representation of the status of, or results obtained from, the action; PUT, DELETE  a representation of the status of the action; OPTIONS  a representation of the communications options; TRACE  a representation of the request message as received by the end server.  Aside from responses to CONNECT, a 200 response always has a payload, though an origin server MAY generate a payload body of zero length.  If no payload is desired, an origin server ought to send 204 (No Content) instead.  For CONNECT, no payload is allowed because the successful result is a tunnel, which begins immediately after the 200 response header section.  A 200 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls (see Section 4.2.2 of [RFC7234])."
+  },
+  {
+		"code": "201",
+    "phrase": "Created",
+    "description": "The 201 (Created) status code indicates that the request has been fulfilled and has resulted in one or more new resources being created.  The primary resource created by the request is identified by either a Location header field in the response or, if no Location field is received, by the effective request URI.  The 201 response payload typically describes and links to the resource(s) created.  See Section 7.2 for a discussion of the meaning and purpose of validator header fields, such as ETag and Last-Modified, in a 201 response."
+  },
+  {
+		"code": "202",
+    "phrase": "Accepted",
+    "description": "The 202 (Accepted) status code indicates that the request has been accepted for processing, but the processing has not been completed.  The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.  There is no facility in HTTP for re-sending a status code from an asynchronous operation.  The 202 response is intentionally noncommittal.  Its purpose is to allow a server to accept a request for some other process (perhaps a batch-oriented process that is only run once per day) without requiring that the user agent's connection to the server persist until the process is completed.  The representation sent with this response ought to describe the request's current status and point to (or embed) a status monitor that can provide the user with an estimate of when the request will be fulfilled."
+  },
+  {
+		"code": "203",
+    "phrase": "Non-Authoritative Information (since HTTP/1.1)",
+    "description": "The 203 (Non-Authoritative Information) status code indicates that the request was successful but the enclosed payload has been modified from that of the origin server's 200 (OK) response by a transforming proxy (Section 5.7.2 of [RFC7230]).  This status code allows the proxy to notify recipients when a transformation has been applied, since that knowledge might impact later decisions regarding the content.  For example, future cache validation requests for the content might only be applicable along the same request path (through the same proxies).  The 203 response is similar to the Warning code of 214 Transformation Applied (Section 5.5 of [RFC7234]), which has the advantage of being applicable to responses with any status code.  A 203 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls (see Section 4.2.2 of [RFC7234])."
+  },
+  {
+		"code": "204",
+    "phrase": "No Content",
+    "description": "The 204 (No Content) status code indicates that the server has successfully fulfilled the request and that there is no additional content to send in the response payload body.  Metadata in the response header fields refer to the target resource and its selected representation after the requested action was applied.  For example, if a 204 status code is received in response to a PUT request and the response contains an ETag header field, then the PUT was successful and the ETag field-value contains the entity-tag for the new representation of that target resource.  The 204 response allows a server to indicate that the action has been successfully applied to the target resource, while implying that the user agent does not need to traverse away from its current 'document view' (if any).  The server assumes that the user agent will provide some indication of the success to its user, in accord with its own interface, and apply any new or updated metadata in the response to its active representation.  For example, a 204 status code is commonly used with document editing interfaces corresponding to a 'save' action, such that the document being saved remains available to the user for editing.  It is also frequently used with interfaces that expect automated data transfers to be prevalent, such as within distributed version control systems.  A 204 response is terminated by the first empty line after the header fields because it cannot contain a message body.  A 204 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls (see Section 4.2.2 of [RFC7234])."
+  },
+  {
+		"code": "205",
+    "phrase": "Reset Content",
+    "description": "The 205 (Reset Content) status code indicates that the server has fulfilled the request and desires that the user agent reset the 'document view', which caused the request to be sent, to its original state as received from the origin server.  This response is intended to support a common data entry use case where the user receives content that supports data entry (a form, notepad, canvas, etc.), enters or manipulates data in that space, causes the entered data to be submitted in a request, and then the data entry mechanism is reset for the next entry so that the user can easily initiate another input action.  Since the 205 status code implies that no additional content will be provided, a server MUST NOT generate a payload in a 205 response.  In other words, a server MUST do one of the following for a 205 response: a) indicate a zero-length body for the response by including a Content-Length header field with a value of 0; b) indicate a zero-length payload for the response by including a Transfer-Encoding header field with a value of chunked and a message body consisting of a single chunk of zero-length; or, c) close the connection immediately after sending the blank line terminating the header section."
+  },
+  {
+		"code": "206",
+    "phrase": "Partial Content",
+    "description": "The 206 (Partial Content) status code indicates that the server is successfully fulfilling a range request for the target resource by transferring one or more parts of the selected representation that correspond to the satisfiable ranges found in the request's Range header field (Section 3.1).  If a single part is being transferred, the server generating the 206 response MUST generate a Content-Range header field, describing what range of the selected representation is enclosed, and a payload consisting of the range.  For example: \n\tHTTP/1.1 206 Partial Content \n\tDate: Wed, 15 Nov 1995 06:25:24 GMT \n\tLast-Modified: Wed, 15 Nov 1995 04:58:08 GMT \n\tContent-Range: bytes 21010-47021/47022 \n\tContent-Length: 26012 \n\tContent-Type: image/gif \n\t... 26012 bytes of partial image data ...  If multiple parts are being transferred, the server generating the 206 response MUST generate a 'multipart/byteranges' payload, as defined in Appendix A, and a Content-Type header field containing the multipart/byteranges media type and its required boundary parameter.  To avoid confusion with single-part responses, a server MUST NOT generate a Content-Range header field in the HTTP header section of a multiple part response (this field will be sent in each part instead).  "
+  },
+  {
+		"code": "207",
+    "phrase": "Multi-Status (WebDAV; RFC 4918)",
+    "description": "A Multi-Status response conveys information about multiple resources in situations where multiple status codes might be appropriate.  The default Multi-Status response body is a text/xml or application/xml HTTP entity with a 'multistatus' root element.  Further elements contain 200, 300, 400, and 500 series status codes generated during the method invocation. 100 series status codes SHOULD NOT be recorded in a 'response' XML element.  Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution.  The response MAY be used in success, partial success and also in failure situations.  The 'multistatus' root element holds zero or more 'response' elements in any order, each with information about an individual resource.  Each 'response' element MUST have an 'href' element to identify the resource.  A Multi-Status response uses one out of two distinct formats for representing the status: 1.  A 'status' element as child of the 'response' element indicates the status of the message execution for the identified resource as a whole (for instance, see Section 9.6.2).  Some method definitions provide information about specific status codes clients should be prepared to see in a response.  However, clients MUST be able to handle other status codes, using the generic rules defined in Section 10 of [RFC2616].  2.  For PROPFIND and PROPPATCH, the format has been extended using the 'propstat' element instead of 'status', providing information about individual properties of a resource.  This format is specific to PROPFIND and PROPPATCH, and is described in detail in Sections 9.1 and 9.2."
+  },
+  {
+		"code": "208",
+    "phrase": "Already Reported (WebDAV; RFC 5842)",
+    "description": "The 208 (Already Reported) status code can be used inside a DAV: propstat response element to avoid enumerating the internal members of multiple bindings to the same collection repeatedly.  For each binding to a collection inside the request's scope, only one will be reported with a 200 status, while subsequent DAV:response elements for all other bindings will use the 208 status, and no DAV:response elements for their descendants are included.  Note that the 208 status will only occur for 'Depth: infinity' requests, and that it is of particular importance when the multiple collection bindings cause a bind loop as discussed in Section 2.2.  A client can request the DAV:resource-id property in a PROPFIND request to guarantee that they can accurately reconstruct the binding structure of a collection with multiple bindings to a single resource.  For backward compatibility with clients not aware of the 208 status code appearing in multistatus response bodies, it SHOULD NOT be used unless the client has signaled support for this specification using the 'DAV' request header (see Section 8.2).  Instead, a 508 status should be returned when a binding loop is discovered.  This allows the server to return the 508 as the top-level return status, if it discovers it before it started the response, or in the middle of a multistatus, if it discovers it in the middle of streaming out a multistatus response."
+  },
+  {
+		"code": "209",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "210",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "211",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "212",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "213",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "214",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "215",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "216",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "217",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "218",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "219",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "220",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "221",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "222",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "223",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "224",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "225",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "226",
+    "phrase": "IM Used (RFC 3229)",
+    "description": "The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance- manipulations applied to the current instance.  The actual current instance might not be available except by combining this response with other previous or future responses, as appropriate for the specific instance-manipulation(s).  If so, the headers of the resulting instance are the result of combining the headers from the status-226 response and the other instances, following the rules in section 13.5.3 of the HTTP/1.1 specification [10].  The request MUST have included an A-IM header field listing at least one instance-manipulation.  The response MUST include an Etag header field giving the entity tag of the current instance.  A response received with a status code of 226 MAY be stored by a cache and used in reply to a subsequent request, subject to the HTTP expiration mechanism and any Cache-Control headers, and to the requirements in section 10.6.  A response received with a status code of 226 MAY be used by a cache, in conjunction with a cache entry for the base instance, to create a cache entry for the current instance."
+  },
+  {
+		"code": "227",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "228",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "229",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "230",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "231",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "232",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "233",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "234",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "235",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "236",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "237",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "238",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "239",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "240",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "241",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "242",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "243",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "244",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "245",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "246",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "247",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "248",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "249",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "250",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "251",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "252",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "253",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "254",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "255",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "256",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "257",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "258",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "259",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "260",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "261",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "262",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "263",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "264",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "265",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "266",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "267",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "268",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "269",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "270",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "271",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "272",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "273",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "274",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "275",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "276",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "277",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "278",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "279",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "280",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "281",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "282",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "283",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "284",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "285",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "286",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "287",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "288",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "289",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "290",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "291",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "292",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "293",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "294",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "295",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "296",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "297",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "298",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "299",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "300",
+    "phrase": "Multiple Choices",
+    "description": "The 300 (Multiple Choices) status code indicates that the target resource has more than one representation, each with its own more specific identifier, and information about the alternatives is being provided so that the user (or user agent) can select a preferred representation by redirecting its request to one or more of those identifiers.  In other words, the server desires that the user agent engage in reactive negotiation to select the most appropriate representation(s) for its needs."
+  },
+  {
+		"code": "301",
+    "phrase": "Moved Permanently",
+    "description": "The 301 (Moved Permanently) status code indicates that the target resource has been assigned a new permanent URI and any future references to this resource ought to use one of the enclosed URIs.  Clients with link-editing capabilities ought to automatically re-link references to the effective request URI to one or more of the new references sent by the server, where possible."
+  },
+  {
+		"code": "302",
+    "phrase": "Found",
+    "description": "The 302 (Found) status code indicates that the target resource resides temporarily under a different URI.  Since the redirection might be altered on occasion, the client ought to continue to use the effective request URI for future requests."
+  },
+  {
+		"code": "303",
+    "phrase": "See Other",
+    "description": "The 303 (See Other) status code indicates that the server is redirecting the user agent to a different resource, as indicated by a URI in the Location header field, which is intended to provide an indirect response to the original request.  A user agent can perform a retrieval request targeting that URI (a GET or HEAD request if using HTTP), which might also be redirected, and present the eventual result as an answer to the original request.  Note that the new URI in the Location header field is not considered equivalent to the effective request URI."
+  },
+  {
+		"code": "304",
+    "phrase": "Not Modified",
+    "description": "The 304 (Not Modified) status code indicates that a conditional GET or HEAD request has been received and would have resulted in a 200 (OK) response if it were not for the fact that the condition evaluated to false.  In other words, there is no need for the server to transfer a representation of the target resource because the request indicates that the client, which made the request conditional, already has a valid representation; the server is therefore redirecting the client to make use of that stored representation as if it were the payload of a 200 (OK) response."
+  },
+  {
+		"code": "305",
+    "phrase": "Use Proxy",
+    "description": "The 305 (Use Proxy) status code was defined in a previous version of this specification and is now deprecated  due to security concerns regarding in-band configuration of a proxy."
+  },
+  {
+		"code": "306",
+    "phrase": "(Unused)",
+    "description": "The 306 status code was defined in a previous version of this specification, is no longer used, and the code is reserved."
+  },
+  {
+		"code": "307",
+    "phrase": "Temporary Redirect",
+    "description": "The 307 (Temporary Redirect) status code indicates that the target resource resides temporarily under a different URI and the user agent MUST NOT change the request method if it performs an automatic redirection to that URI.  Since the redirection can change over time, the client ought to continue using the original effective request URI for future requests."
+  },
+  {
+		"code": "308",
+    "phrase": "Permanent Redirect",
+    "description": "The 308 (Permanent Redirect) status code indicates that the target resource has been assigned a new permanent URI and any future references to this resource ought to use one of the enclosed URIs.  Clients with link editing capabilities ought to automatically re-link references to the effective request URI to one or more of the new references sent by the server, where possible."
+  },
+  {
+		"code": "309",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "310",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "311",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "312",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "313",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "314",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "315",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "316",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "317",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "318",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "319",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "320",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "321",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "322",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "323",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "324",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "325",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "326",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "327",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "328",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "329",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "330",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "331",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "332",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "333",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "334",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "335",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "336",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "337",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "338",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "339",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "340",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "341",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "342",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "343",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "344",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "345",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "346",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "347",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "348",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "349",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "350",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "351",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "352",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "353",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "354",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "355",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "356",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "357",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "358",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "359",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "360",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "361",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "362",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "363",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "364",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "365",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "366",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "367",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "368",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "369",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "370",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "371",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "372",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "373",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "374",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "375",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "376",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "377",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "378",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "379",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "380",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "381",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "382",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "383",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "384",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "385",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "386",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "387",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "388",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "389",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "390",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "391",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "392",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "393",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "394",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "395",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "396",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "397",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "398",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "399",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "400",
+    "phrase": "Bad Request",
+    "description": "The 400 (Bad Request) status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."
+  },
+  {
+		"code": "401",
+    "phrase": "Unauthorized",
+    "description": "The 401 (Unauthorized) status code indicates that the request has not been applied because it lacks valid authentication credentials for the target resource.  The server generating a 401 response MUST send a WWW-Authenticate header field (Section 4.1) containing at least one challenge applicable to the target resource."
+  },
+  {
+		"code": "402",
+    "phrase": "Payment Required",
+    "description": "The 402 (Payment Required) status code is reserved for future use"
+  },
+  {
+		"code": "403",
+    "phrase": "Forbidden",
+    "description": "The 403 (Forbidden) status code indicates that the server understood the request but refuses to authorize it.  A server that wishes to make public why the request has been forbidden can describe that reason in the response payload (if any)."
+  },
+  {
+		"code": "404",
+    "phrase": "Not Found",
+    "description": "The 404 (Not Found) status code indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists.  A 404 status code does not indicate whether this lack of representation is temporary or permanent; the 410 (Gone) status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent."
+  },
+  {
+		"code": "405",
+    "phrase": "Method Not Allowed",
+    "description": "The 405 (Method Not Allowed) status code indicates that the method received in the request-line is known by the origin server but not supported by the target resource.  The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods."
+  },
+  {
+		"code": "406",
+    "phrase": "Not Acceptable",
+    "description": "The 406 (Not Acceptable) status code indicates that the target resource does not have a current representation that would be acceptable to the user agent, according to the proactive negotiation header fields received in the request, and the server is unwilling to supply a default representation."
+  },
+  {
+		"code": "407",
+    "phrase": "Proxy Authentication Required",
+    "description": "The 407 (Proxy Authentication Required) status code is similar to 401 (Unauthorized), but it indicates that the client needs to authenticate itself in order to use a proxy.  The proxy MUST send a Proxy-Authenticate header field containing a challenge applicable to that proxy for the target resource.  The client MAY repeat the request with a new or replaced Proxy-Authorization header field."
+  },
+  {
+		"code": "408",
+    "phrase": "Request Timeout",
+    "description": "The 408 (Request Timeout) status code indicates that the server did not receive a complete request message within the time that it was prepared to wait.  A server SHOULD send the 'close' connection option in the response, since 408 implies that the server has decided to close the connection rather than continue waiting.  If the client has an outstanding request in transit, the client MAY repeat that request on a new connection."
+  },
+  {
+		"code": "409",
+    "phrase": "Conflict",
+    "description": "The 409 (Conflict) status code indicates that the request could not be completed due to a conflict with the current state of the target resource.  This code is used in situations where the user might be able to resolve the conflict and resubmit the request.  The server SHOULD generate a payload that includes enough information for a user to recognize the source of the conflict"
+  },
+  {
+		"code": "410",
+    "phrase": "Gone",
+    "description": "The 410 (Gone) status code indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.  If the origin server does not know, or has no facility to determine, whether or not the condition is permanent, the status code 404 (Not Found) ought to be used instead"
+  },
+  {
+		"code": "411",
+    "phrase": "Length Required",
+    "description": "The 411 (Length Required) status code indicates that the server refuses to accept the request without a defined Content-Length.  The client MAY repeat the request if it adds a valid Content-Length header field containing the length of the message body in the request message."
+  },
+  {
+		"code": "412",
+    "phrase": "Precondition Failed",
+    "description": "The 412 (Precondition Failed) status code indicates that one or more conditions given in the request header fields evaluated to false when tested on the server.  This response code allows the client to place preconditions on the current resource state (its current representations and metadata) and, thus, prevent the request method from being applied if the target resource is in an unexpected state."
+  },
+  {
+		"code": "413",
+    "phrase": "Request Entity Too Large",
+    "description": "The 413 (Payload Too Large) status code indicates that the server is refusing to process a request because the request payload is larger than the server is willing or able to process.  The server MAY close the connection to prevent the client from continuing the request."
+  },
+  {
+		"code": "414",
+    "phrase": "Request URI Too Large",
+    "description": "The 414 (URI Too Long) status code indicates that the server is refusing to service the request because the request-target is longer than the server is willing to interpret.  This rare condition is only likely to occur when a client has improperly converted a POST request to a GET request with long query information, when the client has descended into a 'black hole' of redirection (e.g., a redirected URI prefix that points to a suffix of itself) or when the server is under attack by a client attempting to exploit potential security holes."
+  },
+  {
+		"code": "415",
+    "phrase": "Unsupported Media Type",
+    "description": "The 415 (Unsupported Media Type) status code indicates that the origin server is refusing to service the request because the payload is in a format not supported by this method on the target resource.  The format problem might be due to the request's indicated Content-Type or Content-Encoding, or as a result of inspecting the data directly."
+  },
+  {
+		"code": "416",
+    "phrase": "Requested Range Not Satisfiable",
+    "description": "The 416 (Range Not Satisfiable) status code indicates that none of the ranges in the request's Range header field overlap the current extent of the selected resource or that the set of ranges requested has been rejected due to invalid ranges or an excessive request of small or overlapping ranges."
+  },
+  {
+		"code": "417",
+    "phrase": "Expectation Failed",
+    "description": "The 417 (Expectation Failed) status code indicates that the expectation given in the request's Expect header field could not be met by at least one of the inbound servers."
+  },
+  {
+		"code": "418",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "419",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "420",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "421",
+    "phrase": "Misdirected Request",
+    "description": "The 421 (Misdirected Request) status code indicates that the request was directed at a server that is not able to produce a response.  This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI."
+  },
+  {
+		"code": "422",
+    "phrase": "Unprocessable Entity",
+    "description": "The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity (hence a 415 (Unsupported Media Type) status code is inappropriate), and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.  For example, this error condition may occur if an XML request body contains well-formed (i.e., syntactically correct), but semantically erroneous, XML instructions."
+  },
+  {
+		"code": "423",
+    "phrase": "Locked",
+    "description": "The 423 (Locked) status code means the source or destination resource of a method is locked.  This response SHOULD contain an appropriate precondition or postcondition code, such as 'lock-token-submitted' or 'no-conflicting-lock'."
+  },
+  {
+		"code": "424",
+    "phrase": "Failed Dependency",
+    "description": "The 424 (Failed Dependency) status code means that the method could not be performed on the resource because the requested action depended on another action and that action failed.  For example, if a command in a PROPPATCH method fails, then, at minimum, the rest of the commands will also fail with 424 (Failed Dependency)."
+  },
+  {
+		"code": "425",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "426",
+    "phrase": "Upgrade Required",
+    "description": "The 426 (Upgrade Required) status code indicates that the server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.  The server MUST send an Upgrade header field in a 426 response to indicate the required protocol(s)."
+  },
+  {
+		"code": "427",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "428",
+    "phrase": "Precondition Required",
+    "description":  "The 428 status code indicates that the origin server requires the request to be conditional."
+  },
+  {
+		"code": "429",
+    "phrase": "Too Many Requests",
+    "description":  "The 429 status code indicates that the user has sent too many requests in a given amount of time ('rate limiting')."
+  },
+  {
+		"code": "430",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "431",
+    "phrase": "Request Header Fields Too Large",
+    "description": "The 431 status code indicates that the server is unwilling to process the request because its header fields are too large.  The request MAY be resubmitted after reducing the size of the request header fields."
+  },
+  {
+		"code": "432",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "433",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "434",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "435",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "436",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "437",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "438",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "439",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "440",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "441",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "442",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "443",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "444",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "445",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "446",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "447",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "448",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "449",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "450",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "451",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "452",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "453",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "454",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "455",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "456",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "457",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "458",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "459",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "460",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "461",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "462",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "463",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "464",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "465",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "466",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "467",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "468",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "469",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "470",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "471",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "472",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "473",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "474",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "475",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "476",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "477",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "478",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "479",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "480",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "481",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "482",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "483",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "484",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "485",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "486",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "487",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "488",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "489",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "490",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "491",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "492",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "493",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "494",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "495",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "496",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "497",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "498",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "499",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "500",
+    "phrase": "Internal Server Error",
+    "description": "The 500 (Internal Server Error) status code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request."
+  },
+  {
+		"code": "501",
+    "phrase": "Not Implemented",
+    "description": "The 501 (Not Implemented) status code indicates that the server does not support the functionality required to fulfill the request.  This is the appropriate response when the server does not recognize the request method and is not capable of supporting it for any resource."
+  },
+  {
+		"code": "502",
+    "phrase": "Bad Gateway",
+    "description": "The 502 (Bad Gateway) status code indicates that the server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request."
+  },
+  {
+		"code": "503",
+    "phrase": "Service Unavailable",
+    "description": "The 503 (Service Unavailable) status code indicates that the server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay.  The server MAY send a Retry-After header field to suggest an appropriate amount of time for the client to wait before retrying the request."
+  },
+  {
+		"code": "504",
+    "phrase": "Gateway Timeout",
+    "description": "The 504 (Gateway Timeout) status code indicates that the server, while acting as a gateway or proxy, did not receive a timely response from an upstream server it needed to access in order to complete the request."
+  },
+  {
+		"code": "505",
+    "phrase": "HTTP Version Not Supported",
+    "description": "The 505 (HTTP Version Not Supported) status code indicates that the server does not support, or refuses to support, the major version of HTTP that was used in the request message.  The server is indicating that it is unable or unwilling to complete the request using the same major version as the client other than with this error message.  The server SHOULD generate a representation for the 505 response that describes why that version is not supported and what other protocols are supported by that server.  "
+  },
+  {
+		"code": "506",
+    "phrase": "Variant Also Negotiates",
+    "description": "The 506 status code indicates that the server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process."
+  },
+  {
+		"code": "507",
+    "phrase": "Insufficient Storage",
+    "description": "The 507 (Insufficient Storage) status code means the method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.  This condition is considered to be temporary.  If the request that received this status code was the result of a user action, the request MUST NOT be repeated until it is requested by a separate user action."
+  },
+  {
+		"code": "508",
+    "phrase": "Loop Detected",
+    "description": "The 508 (Loop Detected) status code indicates that the server terminated an operation because it encountered an infinite loop while processing a request with 'Depth: infinity'.  This status indicates that the entire operation failed."
+  },
+  {
+		"code": "509",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "510",
+    "phrase": "Not Extended",
+    "description": "The policy for accessing the resource has not been met in the request.  The server should send back all the information necessary for the client to issue an extended request. It is outside the scope of this specification to specify how the extensions inform the client."
+  },
+  {
+		"code": "511",
+    "phrase": "Network Authentication Required",
+    "description": "The 511 status code indicates that the client needs to authenticate to gain network access."
+  },
+
+  {
+		"code": "512",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "513",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "514",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "515",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "516",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "517",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "518",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "519",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "520",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "521",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "522",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "523",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "524",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "525",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "526",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "527",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "528",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "529",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "530",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "531",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "532",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "533",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "534",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "535",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "536",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "537",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "538",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "539",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "540",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "541",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "542",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "543",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "544",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "545",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "546",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "547",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "548",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "549",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "550",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "551",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "552",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "553",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "554",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "555",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "556",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "557",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "558",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "559",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "560",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "561",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "562",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "563",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "564",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "565",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "566",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "567",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "568",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "569",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "570",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "571",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "572",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "573",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "574",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "575",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "576",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "577",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "578",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "579",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "580",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "581",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "582",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "583",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "584",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "585",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "586",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "587",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "588",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "589",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "590",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "591",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "592",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "593",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "594",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "595",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "596",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "597",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "598",
+    "phrase": "Unassigned",
+    "description": null
+  },
+  {
+		"code": "599",
+    "phrase": "Unassigned",
+    "description": null
+  }
+]
